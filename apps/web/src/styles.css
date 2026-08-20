@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family:
+      Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+
+  button,
+  input,
+  textarea {
+    font: inherit;
+  }
+}
+
+@layer components {
+  .primary-button {
+    @apply inline-flex h-10 items-center justify-center gap-2 rounded-md bg-[#2563eb] px-4 text-sm font-semibold text-white transition hover:bg-[#1d4ed8] disabled:cursor-not-allowed disabled:bg-[#93a4bd];
+  }
+
+  .icon-button {
+    @apply inline-flex h-9 w-9 items-center justify-center rounded-md border border-[#cfd7e3] bg-white text-[#465366] transition hover:border-[#9aa8bb] hover:text-[#111827] disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .field-label {
+    @apply text-sm font-semibold text-[#334155];
+  }
+
+  .tab-trigger {
+    @apply h-9 rounded-md text-sm font-semibold text-[#5b6575] transition data-[state=active]:bg-white data-[state=active]:text-[#111827] data-[state=active]:shadow-sm;
+  }
+
+  .segmented-button {
+    @apply h-9 rounded-md text-sm font-semibold text-[#5b6575] transition hover:text-[#111827];
+  }
+
+  .segmented-button-active {
+    @apply bg-white text-[#111827] shadow-sm;
+  }
+
+  .history-item {
+    @apply block w-full rounded-md border border-transparent px-3 py-3 text-left transition hover:border-[#cfd7e3] hover:bg-[#f4f7fb];
+  }
+
+  .history-item-active {
+    @apply border-[#93c5fd] bg-[#eff6ff];
+  }
+
+  .status-pill {
+    @apply inline-flex h-7 items-center gap-1 rounded-md border border-[#d8dee9] bg-white px-2 text-xs font-semibold text-[#465366];
+  }
+
+  .section-title {
+    @apply flex items-center gap-2 text-sm font-semibold text-[#182230];
+  }
+}
